@@ -18,7 +18,7 @@ function App() {
           </Link>
           </div>
           <div>
-          <Link to="/cart">
+          <Link to="/cart/?qty=?">
               Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
@@ -29,7 +29,7 @@ function App() {
         </header>
         <main>
           <Routes>
-          <Route path="/cart/:id" element={<CartScreen/>} />
+          <Route path="/cart/:id?" element={<CartScreen/>} />
           <Route path="/product/:id" element={<ProductScreen/>}></Route>
           <Route path="/" element={<HomeScreen/>} exact></Route>
           </Routes>
