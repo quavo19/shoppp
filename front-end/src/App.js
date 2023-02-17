@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Link, Route} from "react-router-dom";
 import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import ProductScreen from './screens/ProductsScreen';
+import SigninScreen from './screens/SigninScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -31,6 +32,7 @@ function App() {
           <Routes>
           <Route path="/cart/:id?" element={<CartScreen/>} />
           <Route path="/product/:id" element={<ProductScreen/>}></Route>
+          <Route path="/signin" element={<SigninScreen/>}></Route>
           <Route path="/" element={<HomeScreen/>} exact></Route>
           </Routes>
         </main>
