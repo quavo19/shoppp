@@ -78,6 +78,10 @@ button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
+
+.loading {
+  display: block !important;
+}
 input:hover,
 select:hover,
 textarea:hover,

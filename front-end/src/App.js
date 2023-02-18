@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import { signout } from './actions/userActions';
 import ProductScreen from './screens/ProductsScreen';
+import RegisterScreen from './screens/RegisterScreen';
 import SigninScreen from './screens/SigninScreen';
 
 function App() {
@@ -34,12 +35,12 @@ function App() {
             </Link>
             {userInfo ? (
               <div className="dropdown">
-                <Link to="#">
+                <Link to="/">
                   {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="#signout" onClick={signoutHandler}>
+                    <Link to="/" onClick={signoutHandler}>
                       Sign Out
                     </Link>
                   </li>
@@ -54,6 +55,7 @@ function App() {
           <Routes>
           <Route path="/cart/:id?" element={<CartScreen/>} />
           <Route path="/product/:id" element={<ProductScreen/>}></Route>
+          <Route path="/register" element={<RegisterScreen/>}></Route>
           <Route path="/signin" element={<SigninScreen/>}></Route>
           <Route path="/" element={<HomeScreen/>} exact></Route>
           </Routes>
