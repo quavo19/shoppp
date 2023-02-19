@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import { signout } from './actions/userActions';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductsScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -60,6 +61,7 @@ function App() {
           <Route path="/register" element={<RegisterScreen/>}></Route>
           <Route path="/signin" element={<SigninScreen/>}></Route>
           <Route path="/payment" element={<PaymentMethodScreen/>}></Route>
+          <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
           <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
           <Route path="/" element={<HomeScreen/>} exact></Route>
           </Routes>
