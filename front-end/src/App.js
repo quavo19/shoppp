@@ -9,6 +9,7 @@ import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductsScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -40,10 +41,14 @@ function App() {
             </Link>
             {userInfo ? (
               <div className="dropdown">
+      
                 <Link to="/">
                   {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                 </Link>
                 <ul className="dropdown-content">
+                <li>
+                    <Link to="/profile">User Profile</Link>
+                  </li>
                 <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
@@ -65,6 +70,7 @@ function App() {
           <Route path="/product/:id" element={<ProductScreen/>}></Route>
           <Route path="/register" element={<RegisterScreen/>}></Route>
           <Route path="/signin" element={<SigninScreen/>}></Route>
+          <Route path="/profile" element={<ProfileScreen/>}></Route>
           <Route path="/orderhistory" element={<OrderHistoryScreen/>}></Route>
           <Route path="/payment" element={<PaymentMethodScreen/>}></Route>
           <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
