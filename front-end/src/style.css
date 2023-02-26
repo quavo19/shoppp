@@ -581,15 +581,6 @@ h2 {
     display: none;
   }
 
-  .menu {
-    width: 70px;
-    min-width: 0;
-  }
-
-  .my-account {
-    min-width: 0;
-  }
-
   .menu-bar {
     display: block;
   }

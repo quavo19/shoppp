@@ -16,6 +16,8 @@ import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
+import HomePage from './screens/HomePage';
+import Footer from './Footer';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -109,11 +111,13 @@ function App() {
           <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
           <Route path="/order/:id" element={<OrderScreen/>}></Route>
           <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
-          <Route path="/" element={<HomeScreen/>} exact></Route>
+          <Route path="/product" element={<HomeScreen/>} exact></Route>
+          <Route path="/" element={<HomePage/>} exact></Route>
           </Routes>
         </main>
-        <footer className="row center">All right reserved</footer>
       </div>
+      <Footer/>
+      <footer className="row center">All right reserved</footer>
     </BrowserRouter>
   );
 }
