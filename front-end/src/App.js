@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen';
 import CartScreen from './screens/CartScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import { signout } from './actions/userActions';
+import PrivateRoute from './components/PrivateRoute';
 import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
@@ -73,6 +74,12 @@ function App() {
           <Route path="/profile" element={<ProfileScreen/>}></Route>
           <Route path="/orderhistory" element={<OrderHistoryScreen/>}></Route>
           <Route path="/payment" element={<PaymentMethodScreen/>}></Route>
+          <Route path="/profile"
+          element={
+            <PrivateRoute> 
+              <ProfileScreen/>
+            </PrivateRoute>
+          }></Route>
           <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
           <Route path="/order/:id" element={<OrderScreen/>}></Route>
           <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
