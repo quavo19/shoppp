@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {BrowserRouter, Routes, Link, Route} from "react-router-dom";
 import HomeScreen from './screens/HomeScreen';
+import './style.css'
 import CartScreen from './screens/CartScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import { signout } from './actions/userActions';
@@ -28,26 +29,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className="row nav-bar">
+          
           <div>
             <Link className="brand" to="/">
               amazona
           </Link>
           </div>
-          <div>
-          <Link to="/cart/?qty=?">
-              Cart
-              {cartItems.length > 0 && (
-                <span className="badge">{cartItems.length}</span>
-              )}
-            </Link>
-            {userInfo ? (
-              <div className="dropdown">
-      
-                <Link to="/">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
-                </Link>
-                <ul className="dropdown-content">
+          {userInfo ? (
+              <div className="user-items menu">
+                <ul>
                 <li>
                     <Link to="/profile">User Profile</Link>
                   </li>
@@ -64,6 +55,18 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+          <div>
+          <Link to="/cart/?qty=?">
+          <i className="fa fa-cart-plus"></i>
+              {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+              )}
+            </Link>
+            {
+              userInfo ? <Link to="/">
+              {userInfo.name} <i className="fa fa-user"></i>{' '}
+            </Link> : ''
+            }
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">
