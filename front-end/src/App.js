@@ -10,6 +10,7 @@ import OrderScreen from './screens/OrderScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProductScreen from './screens/ProductsScreen';
+import UserList from './screens/ListUsers';
 import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
@@ -63,6 +64,27 @@ function App() {
             ) : (
               <Link to="/signin">Sign In</Link>
             )}
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to="#admin">
+                  Admin <i className="fa fa-caret-down"></i>
+                </Link>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/productlist">Products</Link>
+                  </li>
+                  <li>
+                    <Link to="/orderlist">Orders</Link>
+                  </li>
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </header>
         <main>
@@ -72,6 +94,7 @@ function App() {
           <Route path="/register" element={<RegisterScreen/>}></Route>
           <Route path="/signin" element={<SigninScreen/>}></Route>
           <Route path="/profile" element={<ProfileScreen/>}></Route>
+          <Route path="/userlist" element={<UserList/>}></Route>
           <Route path="/orderhistory" element={<OrderHistoryScreen/>}></Route>
           <Route path="/payment" element={<PaymentMethodScreen/>}></Route>
           <Route path="/profile"
