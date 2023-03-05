@@ -24,8 +24,8 @@ export default function Welcome() {
         </div>
         <ul class="thumb">
             <li><img src="13.png" class="slide1" alt="popUp-Item"></img></li>
-            <li><img src="watches/blue.png" class="slide2" alt="popUp-Item"></img></li>
-            <li><img src="13pm.png" class="slide3" alt="popUp-Item"></img></li>
+            <li><img src="watches/light-blue.png" class="slide2" alt="popUp-Item"></img></li>
+            <li><img src="watches/yellow.png" class="slide3" alt="popUp-Item"></img></li>
         </ul>
         <ul class="sci">
             <li><Link><img src="facebook.png" alt="facebook icon"></img></Link></li>
