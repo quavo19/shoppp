@@ -35,7 +35,7 @@ function App() {
           
           <div>
             <Link className="brand" to="/">
-              amazona
+              CLASSICS
           </Link>
           </div>
           {userInfo ? (
