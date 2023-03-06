@@ -16,7 +16,8 @@ body {
 
 /* Layout */
 main {
-  margin-top: 30px;
+  margin-top: 50px;
+  min-height: 100vh;
 }
 footer {
   grid-area: footer;
@@ -140,8 +141,8 @@ img.large {
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
+  background-color: #fff;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   margin: 1rem;
 }
