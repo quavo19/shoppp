@@ -5,6 +5,9 @@ import { getwatch } from '../watch'
 export default function Comtest() {
   return (
     <div>
+        <div className="Heading-title">
+        <h1>Latest Product</h1>
+        </div>
         <div className="watch-container">
         <div className="side-one">
             <div className="type">Apple watch</div>

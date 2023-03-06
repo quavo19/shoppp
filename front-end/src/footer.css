@@ -114,15 +114,14 @@ padding-top: 20px;
    width: 100%;
 }
 .title{
-    text-align: center; 
-    margin: 0 auto 80px; 
+   text-align: center; 
+   margin: 0 auto 80px; 
    position: relative;
- line-height: 60px; 
-   color: #c63d3d; 
+   line-height: 60px; 
 }
 .title::after{
    content: '';
-   background: #ff523b;
+   background: #0062be;
    width: 80px;
    height: 5px;
    border-radius:5px;

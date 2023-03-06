@@ -120,6 +120,7 @@ button:hover{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     background-color: #fff;
+    transition: 1.5s;
     border-radius: 70%;
     padding: 20% 0;
     transform: rotate(15deg);
@@ -143,6 +144,7 @@ button:hover{
     grid-column: 1/2;
     grid-row: 1/2;
     max-width: 400px;
+    transition: 1.5s;
     max-height: 400px;
     width: 100%;
     object-fit: cover;
