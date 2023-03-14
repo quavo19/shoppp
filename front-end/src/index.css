@@ -145,7 +145,6 @@ img.large {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   margin: 1rem;
-  max-width: 340px;
 }
 .card-body {
   padding: 1rem;
@@ -270,18 +269,20 @@ img.large {
 .bag-item a {
   display: flex;
   justify-content: space-between;
-  margin: 5px 30px;
+  margin: 5px;
   align-items: center;
 }
 
 .Description-product {
   padding: 20px 0;
   border-top: 1.2px solid #404040;
+  max-width: 300px;
 }
 
 .bag-item {
   background: #000;
   border-radius: 8px;
+  padding: 0px 23px;
 }
 
 .bag-item a {

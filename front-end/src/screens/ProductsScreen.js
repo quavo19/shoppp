@@ -32,7 +32,7 @@ navigate(`/cart/${productId}?qty=${qty}`);
       <MessageBox variant="danger">{error}</MessageBox>
     ) : (
       <div>
-        <Link to="/">Back to result</Link>
+        <Link to="/product"><i class="fa fa-arrow-left"></i></Link>
         <div className="row top">
           <div className="col-2">
             <img

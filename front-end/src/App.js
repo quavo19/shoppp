@@ -17,7 +17,6 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import HomePage from './screens/HomePage';
-import Footer from './Footer';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -116,8 +115,6 @@ function App() {
           </Routes>
         </main>
       </div>
-      <Footer/>
-      <footer className="row center">All right reserved</footer>
     </BrowserRouter>
   );
 }
