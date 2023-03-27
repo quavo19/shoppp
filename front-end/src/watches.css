@@ -85,22 +85,21 @@ a{
 }
 
 
-button{
+.buttonz{
     border: none;
     outline: none;
     background: none;
     border: 1px solid #d3b979;
     color: #d3b979;
-    border-radius: 50px;
+    border-radius: 8px;
     padding: .5rem 1.5rem;
     text-transform: capitalize;
     cursor: pointer;
     margin-right: .5rem;
     transition: .3s ease;
-
 }
 
-button:hover{
+.buttonz:hover{
     color: #fff;
     background-color: #d3b979;
 }
