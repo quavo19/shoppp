@@ -1,5 +1,6 @@
 import React from 'react'
 import '../watches.css'
+import { Link } from "react-router-dom";
 import { getwatch } from '../watch'
 
 export default function Comtest() {
@@ -17,7 +18,11 @@ export default function Comtest() {
                 <div className="small-bold">Solo loop</div>
                 <div className="price">From $339</div>
                 <div className="buttons">
-                    <button>explore more</button>
+                    <button className='buttonz'>
+                    <Link to={`/product/:id`}>
+              Create your account
+            </Link>
+                    </button>
                 </div>
             </div>
         </div>
