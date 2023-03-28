@@ -20,7 +20,7 @@ export default function Comtest() {
                 <div className="buttons">
                     <button className='buttonz'>
                     <Link to={`/product/:id`}>
-              Create your account
+              Explore
             </Link>
                     </button>
                 </div>
