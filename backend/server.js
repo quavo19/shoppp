@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://0.0.0.0:27017/Amazon', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

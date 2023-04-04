@@ -298,11 +298,6 @@ h2 {
   justify-content: space-between;
 }
 
-.form {
-  position: relative;
-  width: 20rem;
-}
-
 .form__input {
   position: absolute;
   top: 0;

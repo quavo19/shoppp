@@ -34,7 +34,7 @@ function App() {
           
           <div>
             <Link className="brand" to="/">
-              CLASSICS
+              CS
           </Link>
           </div>
           {userInfo ? (
@@ -54,7 +54,12 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <div className="user-items menu">
+                
+                  <Link to="/signin">Sign In</Link>
+                 
+              </div>
+              
             )}
           <div>
           <Link to="/cart/?qty=?">
