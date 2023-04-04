@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {BrowserRouter, Routes, Link, Route} from "react-router-dom";
 import HomeScreen from './screens/HomeScreen';
+import './style.css'
 import CartScreen from './screens/CartScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import { signout } from './actions/userActions';
@@ -15,6 +16,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
+import HomePage from './screens/HomePage';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -28,26 +30,16 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="row">
+        <header className="row nav-bar">
+          
           <div>
             <Link className="brand" to="/">
-              amazona
+              CS
           </Link>
           </div>
-          <div>
-          <Link to="/cart/?qty=?">
-              Cart
-              {cartItems.length > 0 && (
-                <span className="badge">{cartItems.length}</span>
-              )}
-            </Link>
-            {userInfo ? (
-              <div className="dropdown">
-      
-                <Link to="/">
-                  {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
-                </Link>
-                <ul className="dropdown-content">
+          {userInfo ? (
+              <div className="user-items menu">
+                <ul>
                 <li>
                     <Link to="/profile">User Profile</Link>
                   </li>
@@ -62,8 +54,25 @@ function App() {
                 </ul>
               </div>
             ) : (
-              <Link to="/signin">Sign In</Link>
+              <div className="user-items menu">
+                
+                  <Link to="/signin">Sign In</Link>
+                 
+              </div>
+              
             )}
+          <div>
+          <Link to="/cart/?qty=?">
+          <i className="fa fa-cart-plus"></i>
+              {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+              )}
+            </Link>
+            {
+              userInfo ? <Link to="/">
+              {userInfo.name} <i className="fa fa-user"></i>{' '}
+            </Link> : ''
+            }
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">
@@ -106,10 +115,10 @@ function App() {
           <Route path="/placeorder" element={<PlaceOrderScreen/>}></Route>
           <Route path="/order/:id" element={<OrderScreen/>}></Route>
           <Route path="/shipping" element={<ShippingAddressScreen/>}></Route>
-          <Route path="/" element={<HomeScreen/>} exact></Route>
+          <Route path="/product" element={<HomeScreen/>} exact></Route>
+          <Route path="/" element={<HomePage/>} exact></Route>
           </Routes>
         </main>
-        <footer className="row center">All right reserved</footer>
       </div>
     </BrowserRouter>
   );

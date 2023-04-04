@@ -28,7 +28,8 @@ const redirect = search ? `/${searchSplit}` : '/';
     }
     }, [userInfo, navigation, redirect])
   return (
-    <div>
+    <div className="form-sec">
+       <div class="circle"></div>
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Sign In</h1>
